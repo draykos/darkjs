@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+</head>
+
+<body>
+    <h1>Dark.js hello world plugin sample</h1>
+    <p>
+        <!-- dark-plugin attribute must have the name of the class defined in plugin javascript file -->
+        <div>This is a sample of a plugin without options</div>
+        <div dark-plugin="helloworld"></div>
+    </p>
+    <p>
+        <!-- all plugin parameters could be declared in dark-options attribute in a serialized string. -->
+        <div>This is a plugin sample, with parameters serialized in dark-options attribute</div>
+        <div dark-plugin="helloworld" dark-options="{label:'hello world with red background!', background:'red'}"></div>
+    </p>
+    <p>
+        <!-- parameters could be declared in data attributes -->
+        <div>This is a plugin sample, with parameters in data attributes </div>
+        <div dark-plugin="helloworld" data-label="Hello with blue background" data-background="#234987"></div>
+    </p>
+    <p>
+        <div>This is a plugin sample, attaching to a generic html element </div>
+        <article dark-plugin="helloworld" ></article>
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../dist/dark.js"></script>
+    <script src="./js/plugins/hello-world.js"></script>
+
+</body>
+
+</html>
